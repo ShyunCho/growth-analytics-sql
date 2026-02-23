@@ -1,0 +1,52 @@
+2026-02-23 – LEFT JOIN & NULL Filtering
+
+🧠 What I Learned
+
+LEFT JOIN
+Keeps all rows from the left table.
+If no match exists in the right table → values become NULL.
+
+Example:
+Visits: 1 2 3
+Transactions: 1 2
+
+LEFT JOIN result:
+1 → matched
+2 → matched
+3 → NULL
+
+NULL Filtering
+When using LEFT JOIN, unmatched rows contain NULL in the joined table.
+To find non-matching rows:
+WHERE t.visit_id IS NULL
+
+GROUP BY
+Groups rows by a specific column.
+Used here to count how many non-transaction visits each customer had.
+
+COUNT(*)
+Counts rows within each group.
+
+🧩 Problem Practiced
+
+LeetCode 1581 – Customer Who Visited but Did Not Make Any Transactions
+
+SELECT
+  v.customer_id,
+  COUNT(*) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+  ON v.visit_id = t.visit_id
+WHERE t.visit_id IS NULL
+GROUP BY v.customer_id;
+
+🔍 Key Insight
+
+LEFT JOIN keeps all visits.
+Unmatched rows become NULL.
+Filtering NULL finds non-converting visits.
+GROUP BY + COUNT calculates how many times each customer failed to convert.
+
+Business Connection:
+Counts visits with zero transactions → non-converting traffic.
+Core logic for funnel drop-off and conversion rate analysis.
