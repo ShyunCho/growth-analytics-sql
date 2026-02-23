@@ -1,6 +1,7 @@
 # growth-analytics-sql
 SQL &amp; Growth Analytics study log and projects
 
-## 📅 Daily Log
-- 2026-02-21 – LEFT JOIN
-- 2026-02-22 – GROUP BY & HAVING
+## Progress
+- 175 – LEFT JOIN basics
+- 182 – GROUP BY + HAVING
+- 1581 – LEFT JOIN + NULL filter + GROUP BY
