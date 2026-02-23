@@ -1,4 +1,6 @@
 -- LeetCode 1581: Customer Who Visited but Did Not Make Any Transactions
+-- Topic: LEFT JOIN + NULL filtering + GROUP BY
+-- Goal: Count non-converting visits per customer
 
 SELECT
   v.customer_id,
