@@ -1,5 +1,5 @@
 # growth-analytics-sql
-SQL &amp; Growth Analytics study log and projects
+SQL &amp; Growth Analytics study log and projects!
 
 ## Progress
 - 175 – LEFT JOIN basics
