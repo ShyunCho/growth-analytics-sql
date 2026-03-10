@@ -1,4 +1,4 @@
-# SQL Notes – LEFT JOIN and COUNT
+# SQL Notes : LEFT JOIN and COUNT
 
 ## 1. LEFT JOIN
 
